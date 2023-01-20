@@ -1,0 +1,45 @@
+<ion-content>
+  <form action="POST" [formGroup]="formulario" (ngSubmit)="autenticar()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img alt="foto-login" src="https://cengage.force.com/resource/1607465003000/loginIcon" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <h1 class="ion-text-center">Bienvenido</h1>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Usuario</ion-label>
+            <ion-input formControlName="username" placeholder="Ingrese su usuario"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Recuerdame</ion-label>
+            <ion-toggle slot="end" [checked]="true"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" type="submit"> Iniciar sesión </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
